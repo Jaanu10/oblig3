@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobilletter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1> Kjøp kinobilletter her </h1>
+            <br>
+            <br>
+            <!--Lager form-skjema som klient fyller inn-->
+            <form class ="form">
+                <div class="form-group">
+                    <label for="filmliste" >Film</label>
+                    <div id="filmliste">
+                    </div>
+                    <!--Inputvalideringsmelding som vises i rød skrift-->
+                    <span id="film-error" class="feilmelding" style="color:darkred"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="antall" class="form-label">Antall</label>
+                    <input type="number" class="form-control" id ="antall" />
+                    <span id="antall-error" class="feilmelding" style="color:darkred"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="fornavn" class="form-label">Fornavn</label>
+                    <input type="text" class="form-control"  id ="fornavn" />
+                    <span id="fornavn-error" class="feilmelding" style="color:darkred"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="etternavn" class="form-label">Etternavn</label>
+                    <input type="text" class="form-control" id ="etternavn" />
+                    <span id="etternavn-error" class="feilmelding" style="color:darkred"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefonnr" class="form-label">Telefonnr</label>
+                    <input type="number" class="form-control" id ="telefonnr" />
+                    <span id="telefonnr-error" class="feilmelding" style="color:darkred"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="epost" class="form-label">Epost</label>
+                    <input type="email" class="form-control" id ="epost" />
+                    <span id="email-error" class="feilmelding" style="color:darkred"></span>
+                </div>
+            </form>
+            <!--Knapp som registrer når det kjøpes billett, legges inn i funksjonen-->
+            <div>
+                <button class="btn btn-primary" onclick="kjopbillett()">Registrer</button>
+                <br>
+            </div>
+            <br>
+
+
+        </div>
+        <div class="col-md-7">
+            <h3>Dine billetter</h3>
+            <!--Div for å vise billetene-->
+            <div id="billettvisning"></div>
+            <br>
+            <!--Knapp som registrer når alle billettene slettes, legges inn i funksjonen-->
+            <button class="btn btn-danger" onclick="slettbilletter()">Slett billettene</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
